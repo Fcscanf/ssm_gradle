@@ -26,7 +26,7 @@
     </context-param>
     <!-- 加载Spring框架中的log4j监听器Log4jConfigListener -->
     <listener>
-        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+        <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
     </listener>
     <!-- 为避免项目间冲突，定义唯一的 webAppRootKey -->
     <context-param>
