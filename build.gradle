@@ -15,6 +15,10 @@ repositories {
     maven{ url"http://maven.aliyun.com/nexus/content/groups/public"}
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 dependencies {
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
