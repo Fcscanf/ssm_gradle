@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: fcsca
@@ -13,7 +14,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>用户列表 here</title>
+    <title>用户列表</title>
 </head>
 <body>
 <table>
