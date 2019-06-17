@@ -20,4 +20,10 @@
           p:prefix="/WEB-INF/views/" p:suffix=".jsp" >
         <property name="order" value="1"/>
     </bean>
+
+    <!--文件上传配置-->
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver"
+          p:defaultEncoding="UTF-8"
+          p:maxUploadSize="54000000">
+    </bean>
 </beans>
