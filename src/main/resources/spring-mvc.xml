@@ -38,4 +38,6 @@
         <!-- 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 -->
     </mvc:interceptors>
 
+    <bean id="fcantExceptionHandler" class="com.fcant.handler.FcantExceptionHandler"/>
+
 </beans>
