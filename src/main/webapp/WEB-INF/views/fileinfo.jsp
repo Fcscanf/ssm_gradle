@@ -21,5 +21,8 @@
 <c:forEach items="${mutilFilePo.descriptions}" var="desc">
     ${desc}
 </c:forEach>
+${filePo.description}
+${filePo.file.originalFilename}
+${key}
 </body>
 </html>

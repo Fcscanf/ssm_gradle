@@ -1,5 +1,6 @@
 package com.fcant.interceptor;
 
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
     /**
      * This implementation always returns {@code true}.
+     * 事务前面拦截
      *
      * @param request
      * @param response
@@ -33,5 +35,21 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             return false;
         }
         return true;
+    }
+
+    /**
+     * This implementation is empty.
+     * 事后拦截/在跳转到视图（jsp页面）之前把数据放进ModelAndView
+     *
+     * @param request
+     * @param response
+     * @param handler
+     * @param modelAndView
+     */
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        if (modelAndView != null) {
+            modelAndView.addObject("key", "1234");
+        }
     }
 }

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 /**
  * UserController
@@ -24,6 +25,8 @@ import java.util.Map;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    private Logger logger;
 
     @Autowired
     UserService userService;

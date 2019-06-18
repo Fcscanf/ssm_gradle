@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td><input id="submit" type="submit" value="登录"></td>
-            <td><a href="${pageContext.request.contextPath}">返回首页</a></td>
+            <td><a href="${pageContext.request.contextPath}">返回首页--${key}</a></td>
         </tr>
     </table>
 </form>
